@@ -15,7 +15,7 @@ public class newLogin {
 		System.out.println("비밀번호를 입력하세요: ");
 		String pass = scanner.next();
 		scanner.nextLine();
-		System.out.println("회원가입이 완료되었습니다. ");
+		User.newUser(name, id, pass);
 		
 	}
 	

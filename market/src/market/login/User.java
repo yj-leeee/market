@@ -6,7 +6,26 @@ public class User {
 			{"이유진", "yu", "skdl" , "실버", 0 }
 	};		
 	
+	public static void newUser(String name, String id, String pass) {
+		Object[][] newUsers = new Object[users.length + 1][5];
+		
+		for(int i = 0; i < users.length; i++) {
+			newUsers[i] = users[i];
+		}
+		newUsers[users.length] = new Object[] {name, id, pass, "실버", 0};
+		users = newUsers;
+		
+		System.out.println(name + "님이 회원가입되었습니다.");
+	}
 	
+	public static void printAllUsers() {
+        System.out.println("----- 전체 회원 목록 -----");
+        for (Object[] user : users) {
+            System.out.println("이름: " + user[0] + ", 아이디: " + user[1] + ", 등급: " + user[3] + ", 포인트: " + user[4]);
+        }
+    }
+	
+	//아이디 확인
 
 	public static String checkId(String id) {
 		for (int i = 0; i < users.length; i++) {
@@ -17,6 +36,8 @@ public class User {
         return "아이디 없음";
 	}
 	
+	//비밀번호 확인
+
 	public static String checkPass(String pass) {
 		for(int i = 0; i<users.length; i++) {
 			if(users[i][2].equals(pass)) {
