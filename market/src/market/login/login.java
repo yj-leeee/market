@@ -2,6 +2,8 @@ package market.login;
 
 import java.util.Scanner;
 
+
+
 public class login {
 	static Scanner scanner = new Scanner(System.in);
 	
@@ -18,7 +20,6 @@ public class login {
 		System.out.println(passResult);
 		scanner.nextLine();
 		User.user_login(id, pass);
-		
 		
 	}
 }

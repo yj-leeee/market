@@ -17,9 +17,12 @@ public class main {
 		switch(choose) {
 		case 1 :
 			login.login();
+			break;
 		case 2 : 
 			newLogin.newLogin();
+			break;
 		}
 		menu.menu();
+		
 	}
 }
