@@ -5,6 +5,15 @@ import java.util.List;
 
 public class myorder {
 
+	public static class myItem{
+		String orderChoose;
+		int orderLarge;
+		
+		public void myItem(String choose, int large) {
+			this.orderChoose = choose;
+			this.orderLarge = large;
+		}
+	}
 	//주문내역 저장
 	private static List<Object[]> orderList = new ArrayList<>();
 	
