@@ -3,7 +3,8 @@ package market.login;
 public class User {
 	//id, pass, name, grade,point
 	private static Object[][] users = {
-			{"이유진", "yu", "skdl" , "실버", 0 }
+			{"이유진", "yu", "skdl" , "실버", 0 },
+			{"1","1","1","실버",0}
 	};		
 	
 	public static void newUser(String name, String id, String pass) {
