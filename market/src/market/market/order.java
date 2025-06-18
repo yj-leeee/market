@@ -16,9 +16,9 @@ public class order {
 		int large = scanner.nextInt();
 		
 		menu.menuOrder(choose, large);
-		
-		//ordering = addorder.askAddOrder(scanner);
-		
+		ordering = addorder.askAddorder(scanner, choose, large);
+		myorder.addOrder(choose, large);
+		myorder.printOrders();
 		 
         
 	}
