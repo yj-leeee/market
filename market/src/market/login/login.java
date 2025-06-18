@@ -13,12 +13,10 @@ public class login {
 		String id = scanner.nextLine();
 		String result = User.checkId(id);
 		System.out.println(result);
-		scanner.nextLine();
 		System.out.println("비밀번호를 입력해주세요: ");
 		String pass = scanner.next();
 		String passResult = User.checkPass(pass);
 		System.out.println(passResult);
-		scanner.nextLine();
 		User.user_login(id, pass);
 		
 	}
