@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 import market.login.login;
 import market.login.newLogin;
+import market.market.addorder;
 import market.market.menu;
+import market.market.myorder;
 import market.market.order;
 
 public class main {
@@ -21,6 +23,7 @@ public class main {
 			login.login();
 			menu.menu();
 			order.order();
+			addorder.askAddorder(scanner);
 			break;
 		case 2 : 
 			newLogin.newLogin();
