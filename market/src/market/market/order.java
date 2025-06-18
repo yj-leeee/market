@@ -14,6 +14,7 @@ public class order {
 		
 		System.out.println("주문 수량 : ");
 		int large = scanner.nextInt();
+		scanner.nextLine();
 		
 		menu.menuOrder(choose, large);
 		ordering = addorder.askAddorder(scanner, choose, large);
