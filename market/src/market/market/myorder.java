@@ -70,4 +70,14 @@ public class myorder {
 
         System.out.println("총 결제 금액: " + allTotal + "원");
     }
+
+    //현재 주문 총액을 반환하는 메서드
+    public static int getAllTotal() {
+    	int sum = 0;
+    	for (myItem item : orderList) {
+    		sum += item.total;
+    	}
+    	return sum;
+    }
+
 }
