@@ -38,9 +38,8 @@ public class main {
 
                     System.out.println("결제창으로 넘어갑니다.");
                     // 결제 처리 코드 넣기
-                    String username = login.currentUser;
-                    int totalPrice = myorder.getAllTotal();
-                    cash.cash(username, totalPrice);
+//                    int totalPrice = myorder.getAllTotal();
+//                    cash.cash(username, totalPrice);
                     break;
 
                 case 2:
