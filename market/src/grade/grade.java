@@ -1,5 +1,5 @@
 package grade;
 
-public class grade {
+public class Grade {
 
 }
