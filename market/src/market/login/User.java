@@ -1,3 +1,4 @@
+
 package market.login;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class User {
     // 로그인 시 사용할 유저 찾기 메서드
     public static User findUser(String id, String password) {
         for (User u : userList) {
-            if (u.id.equals(id) && u.password.equals(password)) {
+            if (u.getId().equals(id) && u.getPassword().equals(password)) {
                 return u;
             }
         }
