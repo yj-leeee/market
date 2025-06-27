@@ -14,6 +14,10 @@ public class User {
     // 유저 리스트를 저장하는 정적 리스트
     private static List<User> userList = new ArrayList<>();
 
+    //기본유저
+    static {
+    	userList.add(new User("1","1","1"));
+    }
     // 생성자
     public User(String name, String id, String password) {
         this.name = name;
