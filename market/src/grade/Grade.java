@@ -15,6 +15,7 @@ public class Grade {
 		this.totalSpent = 0;
 	}
 	
+	
 	//구매 금액 처리
 	public void purchase(int amount) {
 		totalSpent += amount;
@@ -35,6 +36,10 @@ public class Grade {
 			
 		}
 	}
+	// 적립 예정 포인트를 계산만 하는 메서드
+		public int calculateExpectedPoint(int amount) {
+		    return (int)(amount * bonusRate);
+		}
 	
 	public String getGrade() {
 		return grade;

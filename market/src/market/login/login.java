@@ -17,9 +17,11 @@ public class login {
         User user = User.findUser(id, pw);
         if (user != null) {
             System.out.println("로그인 성공! 환영합니다, " + user.getName() + "님");
+            return user;
         } else {
             System.out.println("ID 또는 비밀번호가 올바르지 않습니다.");
+            return null;
         }
-        return user;
+        //return user;
     }
 }
