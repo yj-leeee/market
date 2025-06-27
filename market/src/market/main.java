@@ -1,3 +1,4 @@
+// main.java
 package market;
 
 import java.util.Scanner;
@@ -19,12 +20,18 @@ public class main {
         while (true) {
             System.out.println("어서오세요.");
             System.out.println("1. 로그인하기\n2. 회원가입하기.");
-            Integer choose1 = scanner.nextInt();
-            scanner.nextLine();
+            int choose1 = scanner.nextInt();
+            scanner.nextLine(); // 버퍼 비우기
 
             switch (choose1) {
                 case 1:
-                    login.login();
+                    User user = login.login();
+                    if (user == null) {
+                        // 로그인 실패 시 처음부터 다시 시작
+                        System.out.println("처음 화면으로 돌아갑니다.\n");
+                        break;
+                    }
+
                     menu.menu();
 
                     boolean ordering = true;
@@ -37,10 +44,8 @@ public class main {
                     }
 
                     System.out.println("결제창으로 넘어갑니다.");
-                    // 결제 처리 코드 넣기
                     int totalPrice = myorder.getAllTotal();
-                    String username = login.currentUserName;
-                    cash.cash(username, totalPrice);
+                    cash.cash(user, totalPrice);
                     break;
 
                 case 2:
