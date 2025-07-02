@@ -36,23 +36,13 @@ public class Manager {
                     break;
 
                 case 2: // 재고 추가하기
-                    System.out.print("추가할 재고 이름: ");
-                    String addName = scanner.nextLine();
-
-                    System.out.print(addName + "의 가격: ");
-                    int addPrice = Integer.parseInt(scanner.nextLine());
-
-                    System.out.print(addName + "의 수량: ");
-                    int addStock = Integer.parseInt(scanner.nextLine());
-                    menu.addOrUpdateItem(addName, addPrice, addStock);
-//                    // TODO: menu 클래스의 Array 구조를 List<MenuItem> 등으로 바꿔야 동적 추가 가능
-//                    System.out.println("※ 현재는 재고 추가 기능이 준비 중입니다. menu 구조를 List로 바꾸어야 합니다.");
-//                    System.out.println("입력값 → 이름: " + addName + ", 가격: " + addPrice + "원, 수량: " + addStock + "개");
+                	addMenu.addMenu();
+                   
 
                     break;
 
                 case 3: // 재고 수정하기
-                    System.out.println("※ 재고 수정 기능은 추후 구현 예정입니다.");
+                    System.out.println("수정할 재고 이름: ");
                     break;
 
                 case 4: // 총매출 확인하기
