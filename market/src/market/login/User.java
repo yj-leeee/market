@@ -106,9 +106,11 @@ public class User {
 		
 	}
 	public int addSum(int totalPrice) {
-		this.sum += totalPrice;
-		return sum;
+	    this.sum += totalPrice;
+	    this.grade.updateGrade(this.sum); // ★ 누적합 기준으로 등급 갱신
+	    return sum;
 	}
+
 	
 
 

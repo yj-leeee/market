@@ -16,15 +16,16 @@ public class Grade {
 	}
 	
 	
-	//구매 금액 처리
-	public void purchase(int amount) {
-		totalSpent += amount;
-		point += amount * bonusRate;
-		
-		updateGrade(); //누적 금액 기반 등급 재설정
-	}
+//	//구매 금액 처리
+//	public void purchase(int amount) {
+//		totalSpent += amount;
+//		point += amount * bonusRate;
+//		
+//		updateGrade(); //누적 금액 기반 등급 재설정
+//	}
 	
-	private void updateGrade() {
+	public void updateGrade(int sum) {
+		this.totalSpent = sum;
 		if(totalSpent >= 100000 && !grade.equals("골드")) {
 			grade = "골드";
 			bonusRate = 0.05;
