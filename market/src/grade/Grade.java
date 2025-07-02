@@ -40,6 +40,8 @@ public class Grade {
 		public int calculateExpectedPoint(int amount) {
 		    return (int)(amount * bonusRate);
 		}
+		
+	
 	
 	public String getGrade() {
 		return grade;

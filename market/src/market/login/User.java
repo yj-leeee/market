@@ -47,6 +47,11 @@ public class User {
         }
         return null;
     }
+ // 적립금 사용 업데이트 하는 메서드
+ 		public int usePoint(int pointUse) {
+ 			this.point -= pointUse;
+ 			return point;
+ 		}
 
     public Grade getGradeInfo() {
         return grade; // 필드명과 맞춰서 수정
