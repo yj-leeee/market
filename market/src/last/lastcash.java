@@ -1,6 +1,7 @@
 package last;
 
 import market.login.User;
+import stock.dayFinsh;
 import grade.Grade;
 import java.util.Scanner;
 public class lastcash {
@@ -33,6 +34,7 @@ public class lastcash {
         	
         }
         user.addPoint(expectedPoint);
+        stock.dayFinsh.restockAll();
         System.out.println("결제되었습니다. " + user.getName() + "님 안녕히가세요.");
     }
 }

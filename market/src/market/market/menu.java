@@ -43,6 +43,10 @@ public class menu {
 	        System.out.println("메뉴가 없습니다");
 	    }
 	}
+	public static Object[][] getMenu() {
+	    return menu;
+	}
+
 	
 }
 
