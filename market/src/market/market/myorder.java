@@ -91,9 +91,22 @@ public class myorder {
         }
         return sum;
     }
+    public static void restoreStockOnCancel() {
+        for (myItem order : orderList) {
+            for (MenuItem item : menu.getMenuList()) {
+                if (item.getName().equals(order.orderChoose)) {
+                    item.addStock(order.orderLarge);
+                    System.out.println(order.orderChoose + " " + order.orderLarge + "개 재고가 복구되었습니다.");
+                    break;
+                }
+            }
+        }
+    }
 
     // 결제 후 초기화
     public static void clearOrders() {
         orderList.clear();
     }
+
+	
 }
