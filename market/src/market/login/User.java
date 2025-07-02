@@ -17,7 +17,9 @@ public class User {
 
     // 기본 유저 초기화 (생성자에서 Grade 초기화 추가)
     static {
-        userList.add(new User("1", "1", "1"));
+        User defaultUser = new User("1", "1", "1");
+        defaultUser.point = 500;  // 적립금 500원 설정
+        userList.add(defaultUser);
     }
 
     // 생성자
