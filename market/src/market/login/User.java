@@ -77,5 +77,11 @@ public class User {
         return sum;
     }
 
+	public int addPoint(int expectedPoint) {
+		this.point += expectedPoint;
+		return point;
+		
+	}
+
     // 필요하면 setPoint, setSum, updatePoint 같은 메서드도 추가 가능
 }

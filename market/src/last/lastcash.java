@@ -32,6 +32,7 @@ public class lastcash {
         		return; //종료
         	
         }
+        user.addPoint(expectedPoint);
         System.out.println("결제되었습니다. " + user.getName() + "님 안녕히가세요.");
     }
 }

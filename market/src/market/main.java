@@ -47,6 +47,7 @@ public class main {
                     System.out.println("결제창으로 넘어갑니다.");
                     int totalPrice = myorder.getAllTotal();
                     cash.cash(user, totalPrice);
+                    myorder.clearOrders();
                    // lastcash.lastcash(user, totalPrice);
                     break;
 

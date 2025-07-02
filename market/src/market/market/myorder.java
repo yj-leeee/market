@@ -79,5 +79,11 @@ public class myorder {
     	}
     	return sum;
     }
+ // 결제 완료 후 주문 초기화
+ 
+	public static void clearOrders() {
+		 orderList.clear();
+		
+	}
 
 }
