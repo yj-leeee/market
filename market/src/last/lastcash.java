@@ -19,6 +19,16 @@ public class lastcash {
         System.out.println("현재 회원님의 적립금 : " + user.getPoint());
         System.out.println("적립금을 사용하시겠습니까?\n1:네 최종결제금액 : " + usePoint(user, totalPrice) + "\n2: 아니요 최종결제금액 : " + totalPrice  );
         int answer = scanner.nextInt();
+        
+        switch (answer) {
+        	case 1 :
+        		//적립금 사용 업데이트 코드
+        	case 2 :
+        		break;
+        	default : 
+        		System.out.println("잘못된 입력입니다");
+        	
+        }
         System.out.println("결제되었습니다. " + user.getName() + "님 안녕히가세요.");
     }
 }
