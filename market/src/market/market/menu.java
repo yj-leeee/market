@@ -50,4 +50,19 @@ public class menu {
     public static List<MenuItem> getMenuList() {
         return menuList;
     }
+    public static void addOrUpdateItem(String name, int price, int stockToAdd) {
+        for (MenuItem item : menuList) {
+            if (item.getName().equals(name)) {
+                // 이름이 같으면 수량만 추가 또는 가격도 업데이트 가능
+                item.setStock(item.getStock() + stockToAdd);
+                item.setPrice(price);  // 가격도 바꾸고 싶을 경우
+                System.out.println(name + " 재고가 업데이트되었습니다.");
+                return;
+            }
+        }
+        // 기존 항목이 없으면 새로 추가
+        menuList.add(new MenuItem(name, price, stockToAdd));
+        System.out.println(name + "이 새로 추가되었습니다.");
+    }
+
 }

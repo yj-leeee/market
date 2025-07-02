@@ -34,4 +34,8 @@ public class MenuItem {
     public void addStock(int quantity) {
         this.stock += quantity;
     }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
 }
