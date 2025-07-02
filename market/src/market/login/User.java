@@ -63,6 +63,21 @@ public class User {
  			this.point -= pointUse;
  			return point;
  		}
+ 		
+ 		public static void printAllUsers() {
+ 		    System.out.println("===== 등록된 모든 사용자 정보 =====");
+ 		    for (User user : userList) {
+ 		        System.out.println("이름: " + user.getName() 
+ 		            + "\n 아이디: " + user.getId() 
+ 		            + "\n 비밀번호: " + user.getPassword()
+ 		            + "\n 적립금: " + user.getPoint()
+ 		            + "\n 총 합산 금액: " + user.getSum()
+ 		        	+ "\n 현재 등급: " + user.getGradeInfo().getGrade()
+ 		        	);
+ 		    }
+ 		    System.out.println("=================================");
+ 		}
+
 
     public Grade getGradeInfo() {
         return grade; // 필드명과 맞춰서 수정
@@ -93,6 +108,8 @@ public class User {
 		return point;
 		
 	}
+
+
 
     // 필요하면 setPoint, setSum, updatePoint 같은 메서드도 추가 가능
 }
