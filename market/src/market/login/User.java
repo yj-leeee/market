@@ -44,13 +44,8 @@ public class User {
         System.out.println(name + "님 회원가입이 완료되었습니다.");
     }
 
-    // 로그인 시 사용할 유저 찾기 메서드
+ // 더 이상 매니저 계정 체크는 여기서 하지 않음
     public static User findUser(String id, String password) {
-    	  // 매니저 로그인 먼저 체크
-        if ("m".equals(id) && "m".equals(password)) {
-            Manager.manager();  // Manager 클래스의 manager() 메서드 호출
-            return null;        // 매니저는 User 객체 반환하지 않음 (필요시 다르게 처리 가능)
-        }
         for (User u : userList) {
             if (u.getId().equals(id) && u.getPassword().equals(password)) {
                 return u;
@@ -58,6 +53,8 @@ public class User {
         }
         return null;
     }
+
+    
  // 적립금 사용 업데이트 하는 메서드
  		public int usePoint(int pointUse) {
  			this.point -= pointUse;
