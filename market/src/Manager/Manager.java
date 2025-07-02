@@ -44,7 +44,7 @@ public class Manager {
                     break;
 
                 case 4: // 총매출 확인하기
-                    System.out.println("※ 총매출 확인 기능은 추후 구현 예정입니다.");
+                    total.printTotal();
                     break;
 
                 case 5: // 종료

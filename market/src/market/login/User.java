@@ -105,6 +105,11 @@ public class User {
 		return point;
 		
 	}
+	public int addSum(int totalPrice) {
+		this.sum += totalPrice;
+		return sum;
+	}
+	
 
 
 

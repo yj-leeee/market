@@ -4,6 +4,8 @@ import market.login.User;
 import stock.dayFinsh;
 import grade.Grade;
 import java.util.Scanner;
+
+import Manager.total;
 public class lastcash {
 	Scanner scanner = new Scanner(System.in);
 	public static int usePointCash(User user, int totalPrice) {
@@ -34,6 +36,9 @@ public class lastcash {
         	
         }
         user.addPoint(expectedPoint);
+        user.addSum(totalPrice);
+        
+        total.addTotal(totalPrice);
         stock.dayFinsh.restockAll();
         System.out.println("결제되었습니다. " + user.getName() + "님 안녕히가세요.");
     }
