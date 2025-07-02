@@ -2,6 +2,8 @@ package market.login;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Manager.Manager;
 import grade.Grade;
 
 public class User {
@@ -20,6 +22,10 @@ public class User {
         User defaultUser = new User("1", "1", "1");
         defaultUser.point = 500;  // 적립금 500원 설정
         userList.add(defaultUser);
+    }
+    static {
+    	User manager = new User("매니저","m","m");
+    	userList.add(manager);
     }
 
     // 생성자
@@ -40,6 +46,11 @@ public class User {
 
     // 로그인 시 사용할 유저 찾기 메서드
     public static User findUser(String id, String password) {
+    	  // 매니저 로그인 먼저 체크
+        if ("m".equals(id) && "m".equals(password)) {
+            Manager.manager();  // Manager 클래스의 manager() 메서드 호출
+            return null;        // 매니저는 User 객체 반환하지 않음 (필요시 다르게 처리 가능)
+        }
         for (User u : userList) {
             if (u.getId().equals(id) && u.getPassword().equals(password)) {
                 return u;
