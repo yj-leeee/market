@@ -37,12 +37,10 @@ public class Manager {
 
                 case 2: // 재고 추가하기
                 	addMenu.addMenu();
-                   
-
                     break;
 
                 case 3: // 재고 수정하기
-                    System.out.println("수정할 재고 이름: ");
+                    updateMenu.updateMenu();
                     break;
 
                 case 4: // 총매출 확인하기
