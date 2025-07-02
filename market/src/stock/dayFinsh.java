@@ -5,7 +5,7 @@ import market.market.MenuItem;
 
 public class dayFinsh {
 
-    public static void restockAll() {
+    public static void dayFinsh() {
         for (MenuItem item : menu.getMenuList()) {
             item.addStock(1);
         }

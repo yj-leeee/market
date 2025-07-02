@@ -39,7 +39,7 @@ public class lastcash {
         user.addSum(totalPrice);
         
         total.addTotal(totalPrice);
-        stock.dayFinsh.restockAll();
+        stock.dayFinsh.dayFinsh();
         System.out.println("결제되었습니다. " + user.getName() + "님 안녕히가세요.");
     }
 }

@@ -2,6 +2,7 @@ package market.market;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class menu {
 
@@ -41,7 +42,7 @@ public class menu {
         if (selected.getStock() < quantity) {
             System.out.println("남아있는 재고를 확인해주세요.");
         } else {
-            selected.reduceStock(quantity);
+//            selected.reduceStock(quantity);
             System.out.println(choose + "를 " + quantity + "개 선택하셨습니다.");
         }
     }
@@ -64,5 +65,7 @@ public class menu {
         menuList.add(new MenuItem(name, price, stockToAdd));
         System.out.println(name + "이 새로 추가되었습니다.");
     }
+
+
 
 }

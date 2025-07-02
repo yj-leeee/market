@@ -26,7 +26,7 @@ public class Grade {
 	
 	public void updateGrade(int sum) {
 		this.totalSpent = sum;
-		if(totalSpent >= 100000 && !grade.equals("골드")) {
+		if(totalSpent >= 100000 && !grade.equals("골드") && totalSpent < 150000) {
 			grade = "골드";
 			bonusRate = 0.05;
 			System.out.println(name + "님의 등급이 골드로 상승했습니다.");
